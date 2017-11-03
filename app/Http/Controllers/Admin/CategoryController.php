@@ -81,6 +81,7 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Category $category)
+
     {
         $category->update($request->except('slug'));
         return redirect()->route('admin.category.index');
@@ -94,6 +95,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->route('admin.category.index');
     }
 }

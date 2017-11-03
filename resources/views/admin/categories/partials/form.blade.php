@@ -18,7 +18,10 @@
 <label for="">Родительская категория</label>
 <select class="form-control" name="parent_id">
     <option value="0">-- без родительской категории --</option>
+    <?php var_dump($categories);?>
     @include('admin.categories.partials.categories', ['categories' => $categories])
+    <?php var_dump($categories);?>
+
 </select>
 
 <hr />
